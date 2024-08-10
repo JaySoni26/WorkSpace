@@ -5,6 +5,11 @@ import { start } from "repl";
 export default function Page() {
   return <SignUp appearance={{
     elements: {
+      cardBox:{
+        borderRadius: "0.4rem",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.0)",
+        border: "1px solid rgba(0, 0, 0, 0.1)",
+    },
       logoImage:{
         height:"1.2rem"
       },

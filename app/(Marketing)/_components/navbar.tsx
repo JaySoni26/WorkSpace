@@ -9,7 +9,7 @@ const CTAFont = localFont({src:"../../../public/fonts/Outfit-Regular.ttf"});
 
 export const Navbar = ()=>{
     return (
-        <div className="bg-white fixed top-0 w-full py-8 px-10  flex items-center ">
+        <div className="bg-white  w-full py-8 px-10  flex items-center ">
             <div className="md:max-w-screen-2xl mx-auto flex items-center w-full justify-between">
                 <Logo/>
                 <div className="flex space-x-4 items-center md:block md:w-auto justify-between w-full">

@@ -1,7 +1,7 @@
 
 const organizationIdPage = ()=>{
     return(
-        <div>Org page</div>
+        <div className="">Oraganisation</div>
     );
 };
 

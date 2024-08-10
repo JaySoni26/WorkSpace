@@ -1,0 +1,12 @@
+{
+    "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.activityBar.location": "default",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.preferredDarkColorTheme": "Abyss",
+    "explorer.compactFolders": false,
+    "search.decorations.badges": true,
+    "search.defaultViewMode": "list",
+    "explorer.fileNesting.enabled": false,
+    "explorer.fileNesting.expand": true,
+    "workbench.tree.indent": 28
+}

@@ -4,6 +4,11 @@ export default function Page() {
   return <SignIn
   appearance={{
     elements: {
+      cardBox:{
+        borderRadius: "0.4rem",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.0)",
+        border: "1px solid rgba(0, 0, 0, 0.1)",
+    },
       logoImage:{
         height:"1.2rem"
       },
@@ -25,7 +30,8 @@ export default function Page() {
       fontWeight:{normal: 400, medium: 400, bold: 500},
       borderRadius:'0.3rem',
       fontSize:'0.875rem'
-    }
+    },
+    
   }}
 />;
 }

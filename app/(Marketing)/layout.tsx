@@ -1,4 +1,5 @@
 import { Footer } from "./_components/footer";
+import { Header } from "./_components/header";
 import { Navbar } from "./_components/navbar";
 
 
@@ -8,7 +9,7 @@ const MarketingLayout = (
     return (
         <div className="h-full bg-white">
             {/*Navbar*/}
-            <Navbar/>
+            <Header/>
             <main className="pt-40 pb-20 bg-white">
                 {children}
             </main>
