@@ -61,7 +61,7 @@ export const NavItem = ({
         <AccordionItem value = {organization.id} className="border-none">
             <AccordionTrigger 
                 onClick={()=>onExpand(organization.id)} 
-                className={cn("flex items-center gap-x-2 py-3 px-4  rounded-md hover:bg-neutral-600/10 hover:text-neutral-900 transition text-start no-underline hover:no-underline",isActive && !isExpanded && "bg-neutral-600/10 text-neutral-900")}
+                className={cn("flex items-center gap-x-2 py-3 px-4  rounded-sm hover:bg-neutral-600/10 hover:text-neutral-900 transition text-start no-underline hover:no-underline",isActive && !isExpanded && "bg-neutral-600/10 text-neutral-900")}
             >
                 <div className="flex items-center gap-x-2">
                     <div className="w-7 h-7 relative">
@@ -69,7 +69,7 @@ export const NavItem = ({
                             fill
                             src={organization.imageUrl}
                             alt="Organization"
-                            className="rounded-sm object-cover"
+                            className="rounded-xl object-cover"
                         />
                     </div>
                     <span className="font-medium text-sm">
@@ -77,13 +77,13 @@ export const NavItem = ({
                     </span>
                 </div>
             </AccordionTrigger>
-            <AccordionContent className="pt-2 text-neutral-800">
+            <AccordionContent className="pt-2 pl-12 text-neutral-800">
                 {routes.map((route)=>(
                     <Button
                         variant="ghost"
                         key={route.href}
                         onClick={()=>onClick(route.href)}
-                        className={cn("w-full font-normal justify-start pl-12 mb-1", pathname === route.href && "bg-neutral-600/10 text-neutral-900")}
+                        className={cn("w-full rounded-sm font-normal justify-start pl-6 py-5 mb-1", pathname === route.href && "bg-orange/10 text-darkOrange")}
                     >
                     {route.icon}
                     {route.label}

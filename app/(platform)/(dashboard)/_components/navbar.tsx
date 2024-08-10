@@ -13,10 +13,16 @@ export const Navbar = ()=>{
                     <Logo/>
                 </div>
                 
-                <Button size="sm" className="rounded-md block md:hidden"><Plus className="h-4 w-4"/></Button>
+                <Button size="sm" className="bg-orange hover:bg-darkOrange rounded-md block md:hidden"><Plus className="h-4 w-4"/></Button>
             </div>
             <div className="ml-auto flex items-center gap-x-2">
-                <Button size="sm"className="rounded-md hidden md:block h-2.4rem px-4 font-normal">Create</Button>
+            <Button
+                size="sm"
+                className="rounded-sm hidden md:block h-2.4rem px-4 font-normal bg-orange hover:bg-darkOrange hover:shadow-orange-hover transition-shadow duration-300 ease-in-out"
+            >
+                Create
+</Button>
+
                 <OrganizationSwitcher
                     hidePersonal
                     afterCreateOrganizationUrl="/organization/:id"

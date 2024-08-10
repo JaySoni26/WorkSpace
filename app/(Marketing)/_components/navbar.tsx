@@ -13,10 +13,10 @@ export const Navbar = ()=>{
             <div className="md:max-w-screen-2xl mx-auto flex items-center w-full justify-between">
                 <Logo/>
                 <div className="flex space-x-4 items-center md:block md:w-auto justify-between w-full">
-                    <Button className={cn(CTAFont.className)} variant="outline" size="sm">
+                    <Button className={cn("rounded-sm",CTAFont.className)} variant="outline" size="sm">
                         <Link href='/sign-in' className="flex items-center"><LogIn className="mr-2 w-4" />Sign in</Link>
                     </Button>
-                    <Button className={cn(CTAFont.className)} size="sm">
+                    <Button className={cn("bg-orange hover:bg-darkOrange rounded-sm px-4 hover:shadow-orange-hover",CTAFont.className)} size="sm">
                         <Link href='/sign-up'className="flex items-center"><SquareMousePointer className="mr-2 w-4" />Get Workspace for free</Link>
                     </Button>
                 </div>

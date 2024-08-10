@@ -6,7 +6,7 @@ const organiztionLayout =(
     return(
         <main className="pt-28 px-10 ">
             <div className="flex gap-x-8 ">
-                <div className="shrink-0 w-64 hidden md:block pr-4">
+                <div className="shrink-0 w-64 hidden md:block pr-6 ">
                     <SideBar/>
                 </div>
                 {children}

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import {  Medal } from "lucide-react";
+import {  ArrowUpRight, BriefcaseBusiness, Medal } from "lucide-react";
 import localFont from "next/font/local";
 import Link from "next/link";
 
@@ -16,19 +16,26 @@ const MarketingPage = ()=>{
                     <Medal className="h-6 w-6 mr-2"/>
                     No. 1 Task Management Tool
                 </div>
-                <h1 className="text-3xl md:text-6xl  text-center text-neutral-800 mb-6">
+                <h1 className="text-3xl md:text-6xl  text-center text-navy mb-6">
                     Workspace helps teams move
                 </h1>
-                <div className="text-3xl md:text-6xl bg-gradient-to-r from-fuchsia-600 to-pink-600 p-2 px-4 rounded-md text-white w-fit">
+                <div className="text-3xl md:text-6xl bg-gradient-to-r from-fuchsia-600 to-pink-600 py-3 px-6 rounded-2xl text-white w-fit">
                     Work forward.
                 </div>
             </div>
             <div className={cn("text-sm md:text-xl text-neutral-500 mt-12 max-w-xs md:max-w-2xl mx-auto text-center -tracking--0.05",pFont.className)}>
                 Collaborate , manage projects & reach new productivity peaks.From High rises to Home office ,the way your team work is unique accomplish it all with workspace
             </div>
-            <Button className={cn("mt-12",CTAFont.className)} size="lg" asChild>
-                <Link href="/sign-up">Get Workspace for free</Link>
-            </Button>
+            <div className={cn("mt-12 bg-orange rounded-sm hover:bg-darkOrange py-4 px-10 text-white font-semibold", "hover:bg-dark-orange hover:shadow-orange-hover","transition-shadow duration-300 ease-in-out" ,CTAFont.className)} >
+                <Link href="/sign-up">
+                <div className=" flex gap-x-2 ">
+                Get Workspace for free
+                    
+                    <ArrowUpRight />
+                </div>
+                    
+                </Link>
+            </div>
         </div>
     );
 }

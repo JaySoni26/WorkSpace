@@ -22,6 +22,9 @@ const config = {
         '-0.05': '0.015em', // -5% letter spacing
       },
       colors: {
+        'orange': '#FF8125',
+        'darkOrange':'#FF6C00',
+        'navy':'#0C0A3E',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -74,6 +77,10 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      boxShadow: {
+        'orange-hover': '0 14px 22px rgba(255, 129, 37, 0.4)', // Custom orange shadow
+        'text-black': '2px 2px 4px rgba(0, 0, 0, 0.5)'
       },
     },
   },
