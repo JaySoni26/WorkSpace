@@ -52,14 +52,25 @@ export const SideBar =(
     };
     if(!isLoadedOrg || !isLoadedOrgList || userMemberships.isLoading){
         return (
-            <>
-                <Skeleton/>
+            <> 
+                <div className="flex items-center justify-between mb-10">
+                    <Skeleton className="h-10 w-[50%]"/>
+                    <Skeleton className="h-10 w-10"/>
+                </div>
+                <div className="space-y-2">
+                    <NavItem.Skeleton/>
+                    <NavItem.Skeleton/>
+                    <NavItem.Skeleton/>
+                    <NavItem.Skeleton/>
+                    <NavItem.Skeleton/>
+                    <NavItem.Skeleton/>
+                </div>
             </>
         );
     }
     return (
         <>
-            <div className="font-normal text-xs flex items-center mb-4 text-neutral-500 ">
+            <div className="font-normal text-xs flex items-center mb-4 text-neutral-500">
                 <span className="">WORKSPACES</span>
                 <Button
                     asChild

@@ -5,6 +5,7 @@ import { AccordionContent, AccordionItem, AccordionTrigger } from "@/components/
 import Image from "next/image";
 import { Settings, Layout ,Activity, CreditCard, UsersRound} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 
 
 
@@ -83,7 +84,7 @@ export const NavItem = ({
                         variant="ghost"
                         key={route.href}
                         onClick={()=>onClick(route.href)}
-                        className={cn("w-full rounded-sm font-normal justify-start pl-6 py-5 mb-1", pathname === route.href && "bg-orange/10 text-darkOrange")}
+                        className={cn("w-full hover:bg-neutral-600/10 hover:text-neutral-900 transition rounded-sm font-normal justify-start pl-6 py-5 mb-1", pathname === route.href && "bg-orange/10 text-darkOrange")}
                     >
                     {route.icon}
                     {route.label}
@@ -91,5 +92,18 @@ export const NavItem = ({
                 ))}
             </AccordionContent>
         </AccordionItem>
+    );
+}
+
+NavItem.Skeleton =  function SkeletonNavItem(){
+    return (
+        <div className="flex items-center gap-x-2">
+            <div className="w-10 h-10 relative shrink-0">
+                <Skeleton
+                    className="h-full w-full absolute"
+                />
+            </div>
+            <Skeleton className="h-10 w-full"/>
+        </div>
     );
 }

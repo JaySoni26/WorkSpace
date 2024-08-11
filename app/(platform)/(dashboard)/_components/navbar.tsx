@@ -6,7 +6,7 @@ import { MobileSidebar } from "./mobile-sidebar";
 
 export const Navbar = ()=>{
     return(
-        <div className="fixed z-50 top-0 w-full bg-white flex items-center py-6 px-10  ">
+        <div className="fixed z-50 top-0 w-full bg-white flex items-center py-6 px-10 border-b border-black/5  ">
             <MobileSidebar/>
             <div className="flex items-center gap-x-4">
                 <div className="hidden md:flex">
