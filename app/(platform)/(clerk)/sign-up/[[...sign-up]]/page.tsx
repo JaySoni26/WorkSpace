@@ -6,7 +6,7 @@ export default function Page() {
   return <SignUp appearance={{
     elements: {
       cardBox:{
-        borderRadius: "0.5rem",
+        borderRadius: "1.4rem",
         boxShadow: "0 14px 18px rgba(0, 0, 0, 0.05)",
         border: "1px solid rgba(0, 0, 0, 0.1)",
       },
@@ -17,7 +17,7 @@ export default function Page() {
         height: "3rem",
         fontSize: 16,
         textTransform: "none",
-        borderRadius: "0.2rem",  
+        borderRadius: "5.2rem",  
         backgroundColor: "#FF8125",
         border: "1px solid #FF8125",  // Explicitly set the border to the same color as the background
         boxShadow: "none !important", // Ensure the shadow is removed
@@ -30,10 +30,10 @@ export default function Page() {
       formFieldInput:{
         height: "3rem",
         fontSize: 14,
-        borderRadius: "0.2rem",  
+        borderRadius: "1.2rem",  
       },
       phoneInputBox:{
-        borderRadius: "0.2rem", 
+        borderRadius: "1.2rem", 
       },
       socialButtonsIconButton:{
         borderRadius: "5rem",  

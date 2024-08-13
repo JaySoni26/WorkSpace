@@ -12,7 +12,7 @@ const SettingsPage = ()=>{
                         cardBox:{
                             width:"100%",
                             height:"auto",
-                            borderRadius: "0.4rem",
+                            borderRadius: "1.4rem",
                             boxShadow: "none",
                             border: "0.5px solid #e5e5e5"
                         },

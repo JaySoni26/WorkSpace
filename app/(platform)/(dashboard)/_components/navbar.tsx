@@ -3,10 +3,11 @@ import { Button } from "@/components/ui/button";
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 import { Plus } from "lucide-react";
 import { MobileSidebar } from "./mobile-sidebar";
+import SolidCornerSmoothing from 'solid-corner-smoothing';
 
 export const Navbar = ()=>{
     return(
-        <div className="fixed z-50 top-0 w-full bg-white flex items-center py-6 px-10 border-b border-black/5  ">
+        <div className="fixed z-50 top-0 w-full bg-white flex items-center py-6 px-10  border-b border-black/5 ">
             <MobileSidebar/>
             <div className="flex items-center gap-x-4">
                 <div className="hidden md:flex">
@@ -16,12 +17,13 @@ export const Navbar = ()=>{
                 <Button size="sm" className="bg-orange hover:bg-darkOrange rounded-md block md:hidden"><Plus className="h-4 w-4"/></Button>
             </div>
             <div className="ml-auto flex items-center gap-x-2">
+                
             <Button
                 size="sm"
-                className="rounded-sm hidden md:block h-2.4rem px-4 font-normal bg-orange hover:bg-darkOrange hover:shadow-orange-hover transition-shadow duration-300 ease-in-out"
+                className="rounded-full hidden md:block h-2.4rem px-4 font-normal bg-orange hover:bg-darkOrange hover:shadow-orange-hover transition-shadow duration-300 ease-in-out"
             >
                 Create
-</Button>
+            </Button>
 
                 <OrganizationSwitcher
                     hidePersonal
@@ -36,7 +38,7 @@ export const Navbar = ()=>{
                                 justifyContent:"center",
                                 alignContent:"center",
                                 border: "1px solid rgba(0, 0, 0, 0.1)", // Add border property
-                                borderRadius: "0.4rem",
+                                borderRadius: "5.4rem",
                             }
                         }
                     }}

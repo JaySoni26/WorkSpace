@@ -62,7 +62,7 @@ export const NavItem = ({
         <AccordionItem value = {organization.id} className="border-none">
             <AccordionTrigger 
                 onClick={()=>onExpand(organization.id)} 
-                className={cn("flex items-center gap-x-2 py-3 px-4  rounded-sm hover:bg-neutral-600/10 hover:text-neutral-900 transition text-start no-underline hover:no-underline",isActive && !isExpanded && "bg-neutral-600/10 text-neutral-900")}
+                className={cn("flex items-center gap-x-2 py-3 px-4  rounded-full hover:bg-neutral-600/10 hover:text-neutral-900 transition text-start no-underline hover:no-underline",isActive && !isExpanded && "bg-neutral-600/10 text-neutral-900")}
             >
                 <div className="flex items-center gap-x-2">
                     <div className="w-7 h-7 relative">
@@ -70,7 +70,7 @@ export const NavItem = ({
                             fill
                             src={organization.imageUrl}
                             alt="Organization"
-                            className="rounded-xl object-cover"
+                            className="rounded-full object-cover"
                         />
                     </div>
                     <span className="font-medium text-sm">
@@ -84,7 +84,7 @@ export const NavItem = ({
                         variant="ghost"
                         key={route.href}
                         onClick={()=>onClick(route.href)}
-                        className={cn("w-full hover:bg-neutral-600/10 hover:text-neutral-900 transition rounded-sm font-normal justify-start pl-6 py-5 mb-1", pathname === route.href && "bg-orange/10 text-darkOrange")}
+                        className={cn("w-full hover:bg-neutral-600/10 hover:text-neutral-900 transition rounded-full font-normal justify-start pl-6 py-5 mb-1", pathname === route.href && "bg-orange/10 text-darkOrange")}
                     >
                     {route.icon}
                     {route.label}

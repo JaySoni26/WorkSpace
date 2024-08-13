@@ -1,12 +1,20 @@
+'use client';
 import { Button } from "@/components/ui/button";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { cn } from "@/lib/utils";
-import {  ArrowUpRight, BriefcaseBusiness, Medal } from "lucide-react";
+import {  Medal, MoveRight } from "lucide-react";
 import localFont from "next/font/local";
 import Link from "next/link";
+import TextReveal from "./_components/TextReveal";
+import ExpandFromCenter from "./_components/expandText";
+import Marquee from "@/components/ui/marquee";
+import CustomButton from "./_components/customBtn";
 
 const headingFont = localFont({src:"../../public/fonts/CLSans.otf"});
 const pFont = localFont({src:"../../public/fonts/Outfit-Light.ttf"});
 const CTAFont = localFont({src:"../../public/fonts/Outfit-Regular.ttf"});
+
+const HeroWords = `WorkSpace helps teams move`
 
 const MarketingPage = ()=>{
     return (
@@ -16,26 +24,28 @@ const MarketingPage = ()=>{
                     <Medal className="h-6 w-6 mr-2"/>
                     No. 1 Task Management Tool
                 </div>
-                <h1 className="text-3xl md:text-6xl  text-center text-navy mb-6">
-                    Workspace helps teams move
-                </h1>
-                <div className="text-3xl md:text-6xl bg-gradient-to-r from-fuchsia-600 to-pink-600 py-3 px-6 rounded-2xl text-white w-fit">
-                    Work forward.
-                </div>
+                <TextReveal
+                    classname="text-3xl md:text-6xl text-center text-navy mb-6"
+                    text="Tasks, Teams, Triumphs"
+                />
+                <Marquee 
+                    text="Work forward." 
+                    textSizeClass="text-3xl md:text-6xl " // Pass the text size class here
+                />
+                
             </div>
-            <div className={cn("text-sm md:text-xl text-neutral-500 mt-12 max-w-xs md:max-w-2xl mx-auto text-center -tracking--0.05",pFont.className)}>
-                Collaborate , manage projects & reach new productivity peaks.From High rises to Home office ,the way your team work is unique accomplish it all with workspace
+            <div className={cn("text-sm md:text-xl text-navy/65 mt-12 max-w-xs md:max-w-2xl mx-auto text-center ",pFont.className)}>
+                Boost productivity and streamline projects. From high rises to home offices, we adapt to your unique workflow.
             </div>
-            <div className={cn("mt-12 bg-orange rounded-sm hover:bg-darkOrange py-4 px-10 text-white font-semibold", "hover:bg-dark-orange hover:shadow-orange-hover","transition-shadow duration-300 ease-in-out" ,CTAFont.className)} >
-                <Link href="/sign-up">
-                <div className=" flex gap-x-2 ">
-                Get Workspace for free
-                    
-                    <ArrowUpRight />
-                </div>
-                    
-                </Link>
-            </div>
+            <CustomButton 
+                    text="Create WorkSpace" 
+                    href="/sign-up"
+                    icon={<MoveRight />}
+                    className="text-orange border-orange py-3 px-6 mt-12"
+                    textClassName="font-medium text-base"
+                    circleClassName="bg-orange"
+            />
+            
         </div>
     );
 }
